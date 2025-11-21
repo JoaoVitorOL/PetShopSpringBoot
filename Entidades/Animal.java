@@ -30,7 +30,7 @@ public class Animal {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private SexoAnimal sexo;
+    private Sexo sexo;
 
     private Float peso;
 
