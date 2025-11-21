@@ -2,6 +2,7 @@ package com.example.petshop.entidades;
 
 import jakarta.persistence.*;
 
+@Table(name = "Vacina")
 @Entity
 public class Vacina {
 
