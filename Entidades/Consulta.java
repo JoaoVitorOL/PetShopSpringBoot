@@ -1,5 +1,6 @@
-package com.example.petshop.entities;
+package com.example.demo.entities;
 
+import com.example.demo.enums.Status;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -25,9 +26,9 @@ public class Consulta {
 
     @ManyToMany
     @JoinTable(
-        name = "consulta_vacina",
-        joinColumns = @JoinColumn(name = "id_consulta"),
-        inverseJoinColumns = @JoinColumn(name = "id_vacina")
+            name = "consulta_vacina",
+            joinColumns = @JoinColumn(name = "id_consulta"),
+            inverseJoinColumns = @JoinColumn(name = "id_vacina")
     )
     private List<Vacina> vacinas = new ArrayList<>();
 
@@ -39,7 +40,7 @@ public class Consulta {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private StatusConsulta status;
+    private Status status;
 
     public void addVacina(Vacina v) {
         if (!vacinas.contains(v)) {
@@ -47,6 +48,7 @@ public class Consulta {
             v.getConsultas().add(this);
         }
     }
+
     public void removeVacina(Vacina v) {
         if (vacinas.remove(v)) {
             v.getConsultas().remove(this);
