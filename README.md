@@ -27,6 +27,7 @@ OS QUE REPETEM:
 * Cpf
 * Telefone
 * email
+  * senha
 
 
 Consultas
