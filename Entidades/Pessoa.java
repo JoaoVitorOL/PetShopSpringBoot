@@ -2,11 +2,6 @@ package com.petshop.demo.domain.entities;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
-
-//import com.example.demo.domain.enums.Perfil;
 
 @MappedSuperclass
 public abstract class Pessoa implements Serializable {
