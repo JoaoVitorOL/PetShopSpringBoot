@@ -1,9 +1,9 @@
-package com.petshop.demo.domain.enums;
+package com.example.demo.enums;
 
 public enum Sexo {
 
     MASCULINO(0, "Masculino"),
-    FEMININO(1, "Feminino"),
+    FEMININO(1, "Feminino");
 
     private final int codigo;
     private final String descricao;
@@ -34,4 +34,4 @@ public enum Sexo {
 
         throw new IllegalArgumentException("Sexo inválido: " + cod);
     }
-}
+    }
