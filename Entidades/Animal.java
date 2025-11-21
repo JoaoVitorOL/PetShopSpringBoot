@@ -23,19 +23,17 @@ public class Animal {
 
     private LocalDate dataNascimento;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     @JoinColumn(name = "id_dono", nullable = false)
     private Dono dono;
 
-
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Sexo sexo;
-
+    private SexoAnimal sexo;
 
     private Float peso;
 
-    @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL, orphanRemoval = false)
+    @OneToMany(mappedBy = "animal")
     private List<Consulta> consultas;
 
     // Getters e Setters
