@@ -17,6 +17,8 @@ Veterinário
 * Cpf
 * Telefone
 * email
+* salário (///)
+* especialidade (///)  (Enum)
 
 
 OS QUE REPETEM:
@@ -25,8 +27,7 @@ OS QUE REPETEM:
 * Cpf
 * Telefone
 * email
-* salário (///)
-* especialidade (///)  (Enum)
+
 
 Consultas
 * id_consulta
