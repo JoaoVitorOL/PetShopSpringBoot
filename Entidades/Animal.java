@@ -24,7 +24,7 @@ public class Animal {
 
     @ManyToOne
     @JoinColumn(name = "id_dono", nullable = false)
-    private Dono dono;
+    private Dono id_dono;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
