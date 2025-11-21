@@ -18,7 +18,7 @@ public abstract class Pessoa implements Serializable {
     @Column(nullable = false)
     private String nome;
 
-    private string sobrenome
+    private String sobrenome
 
     @Column(unique = true, nullable = false)
     private String cpf;
@@ -28,10 +28,6 @@ public abstract class Pessoa implements Serializable {
 
     @Column(unique = true, nullable = false)
     private String email;
-
-    @Column( nullable = false)
-    private String email;
-
 
     // Getters e Setters
     public Integer getId() {
@@ -54,7 +50,7 @@ public abstract class Pessoa implements Serializable {
         return sobrenome;
     }
 
-    public void setSobrenome(String nome) {
+    public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
 
