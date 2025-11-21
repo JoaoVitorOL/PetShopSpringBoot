@@ -1,9 +1,10 @@
-package Nome_do_Package;
+package com.example.petshop.entities;
 
 import jakarta.persistence.*;
+import java.util.List;
 
-@Table(name = "Veterinario")
 @Entity
+@Table(name = "veterinario")
 public class Veterinario extends Pessoa {
 
     @Column(nullable = false)
@@ -12,6 +13,9 @@ public class Veterinario extends Pessoa {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Especialidade especialidade;
+
+    @OneToMany(mappedBy = "veterinario")
+    private List<Consulta> consultas;
 
     public Veterinario() {}
 
@@ -25,4 +29,7 @@ public class Veterinario extends Pessoa {
 
     public Especialidade getEspecialidade() { return especialidade; }
     public void setEspecialidade(Especialidade especialidade) { this.especialidade = especialidade; }
+
+    public List<Consulta> getConsultas() { return consultas; }
+    public void setConsultas(List<Consulta> consultas) { this.consultas = consultas; }
 }
