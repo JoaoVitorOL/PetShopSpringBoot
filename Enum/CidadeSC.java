@@ -1,4 +1,4 @@
-package com.petshop.demo.domain.enums;
+package com.example.demo.enums;
 
 
 public enum CidadeSC {
@@ -72,4 +72,3 @@ public enum CidadeSC {
         throw new IllegalArgumentException("CidadeSC inválida: " + cod);
     }
 }
-
