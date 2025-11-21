@@ -25,6 +25,7 @@ public class Animal {
 
     @ManyToOne
     @JoinColumn(name = "id_dono", nullable = false)
+    @Column(nullable = false)
     private Dono dono;
 
     @Enumerated(EnumType.STRING)
