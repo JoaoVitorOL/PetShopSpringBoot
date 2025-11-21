@@ -2,6 +2,7 @@ package Nome_do_Package;
 
 import jakarta.persistence.*;
 
+@Table(name = "Dono")
 @Entity
 public class Dono extends Pessoa {
 
