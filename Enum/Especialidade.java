@@ -1,4 +1,4 @@
-package com.petshop.demo.domain.enums;
+package com.example.demo.enums;
 
 
 public enum Especialidade{
@@ -10,7 +10,7 @@ public enum Especialidade{
     ANIMALDOMESTICO(4, "Animal Domestico"),
     ANIMALSILVESTRE(5, "Animal Silvestre"),
     INSETO(7, "Insetos"),
-    ARACNIDEO(7, "Aracnideos"),
+    ARACNIDEO(7, "Aracnideos");
 
 
     private final int codigo;
@@ -42,5 +42,4 @@ public enum Especialidade{
 
         throw new IllegalArgumentException("Especialidade inválida: " + cod);
     }
-}
-
+    }
