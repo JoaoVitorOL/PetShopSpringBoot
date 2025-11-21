@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "Dono")
+@Table(name = "dono")
 public class Dono extends Pessoa {
 
     @Enumerated(EnumType.STRING)
