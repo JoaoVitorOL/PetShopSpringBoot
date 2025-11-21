@@ -23,10 +23,10 @@ public class Animal {
 
     private LocalDate dataNascimento;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "id_dono", nullable = false)
-    @Column(nullable = false)
     private Dono dono;
+
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
