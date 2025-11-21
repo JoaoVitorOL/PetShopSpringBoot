@@ -1,4 +1,4 @@
-package com.petshop.demo.domain.entities;
+package Nome_do_Package;
 
 import jakarta.persistence.*;
 
