@@ -1,4 +1,4 @@
-package com.example.petshop.entidades;
+package com.example.demo.entities;
 
 import jakarta.persistence.*;
 import java.util.List;
