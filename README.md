@@ -53,3 +53,16 @@ Animais
 * id_dono
 * sexo  (Enum)
 * peso
+
+
+RELACIONAMENTOS:
+
+1 dono pode ter N animais
+1 animal tem só 1 dono
+1 animal N consultas
+1 veterinario N consultas
+1 consulta 1 vatarinario
+1 consulta 1:N vacinas
+
+
+
