@@ -2,6 +2,7 @@ package com.example.demo.domain.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "animal")
@@ -24,13 +25,16 @@ public class Animal {
 
     @ManyToOne
     @JoinColumn(name = "id_dono", nullable = false)
-    private Dono id_dono;
+    private Dono dono;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private SexoAnimal sexo;
 
     private Float peso;
+
+    @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL, orphanRemoval = false)
+    private List<Consulta> consultas;
 
     // Getters e Setters
     public Integer getId() { return id; }
@@ -56,4 +60,7 @@ public class Animal {
 
     public Float getPeso() { return peso; }
     public void setPeso(Float peso) { this.peso = peso; }
+
+    public List<Consulta> getConsultas() { return consultas; }
+    public void setConsultas(List<Consulta> consultas) { this.consultas = consultas; }
 }
