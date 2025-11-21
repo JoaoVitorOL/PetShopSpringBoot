@@ -8,6 +8,7 @@ import java.util.List;
 public class Dono extends Pessoa {
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private CidadeSC cidade;
 
     private String endereco;
