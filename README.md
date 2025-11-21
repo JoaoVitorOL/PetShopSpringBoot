@@ -34,6 +34,7 @@ Consultas
 * id_consulta
 * id_animal
 * id_veterinario
+* id_vacina
 * data_consulta
 * motivo
 * status (Enum)
