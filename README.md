@@ -7,7 +7,7 @@ Dono
 * Cpf
 * Telefone
 * email
-* cidade (///)
+* cidade (///) (Enum)
 * endereço  (///)
 
 Veterinário
@@ -26,7 +26,7 @@ OS QUE REPETEM:
 * Telefone
 * email
 * salário (///)
-* especialidade (///)  (Animais Silvestres / Animais Domésticos / Animais de Pequeno porte / Animais de grande porte)
+* especialidade (///)  (Enum)
 
 Consultas
 * id_consulta
@@ -34,7 +34,7 @@ Consultas
 * id_veterinario
 * data_consulta
 * motivo
-* status
+* status (Enum)
 
 Vacinas
 * id_vacina
@@ -49,5 +49,5 @@ Animais
 * raca
 * data_nascimento
 * id_dono
-* sexo
+* sexo  (Enum)
 * peso
