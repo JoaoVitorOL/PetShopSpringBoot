@@ -32,6 +32,7 @@ public class Animal {
     @Column(nullable = false)
     private Sexo sexo;
 
+
     private Float peso;
 
     @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL, orphanRemoval = false)
