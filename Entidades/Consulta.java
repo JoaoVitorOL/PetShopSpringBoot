@@ -4,17 +4,20 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "consulta")
 public class Consulta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idConsulta;
 
-    @Column(nullable = false)
-    private Integer idAnimal;
+    @ManyToOne
+    @JoinColumn(name = "id_animal", nullable = false)
+    private Animal animal;
 
-    @Column(nullable = false)
-    private Integer idVeterinario;
+    @ManyToOne
+    @JoinColumn(name = "id_veterinario", nullable = false)
+    private Veterinario veterinario;
 
     @Column(nullable = false)
     private LocalDate dataConsulta;
@@ -30,11 +33,11 @@ public class Consulta {
     public Integer getIdConsulta() { return idConsulta; }
     public void setIdConsulta(Integer idConsulta) { this.idConsulta = idConsulta; }
 
-    public Integer getIdAnimal() { return idAnimal; }
-    public void setIdAnimal(Integer idAnimal) { this.idAnimal = idAnimal; }
+    public Animal getAnimal() { return animal; }
+    public void setAnimal(Animal animal) { this.animal = animal; }
 
-    public Integer getIdVeterinario() { return idVeterinario; }
-    public void setIdVeterinario(Integer idVeterinario) { this.idVeterinario = idVeterinario; }
+    public Veterinario getVeterinario() { return veterinario; }
+    public void setVeterinario(Veterinario veterinario) { this.veterinario = veterinario; }
 
     public LocalDate getDataConsulta() { return dataConsulta; }
     public void setDataConsulta(LocalDate dataConsulta) { this.dataConsulta = dataConsulta; }
