@@ -1,7 +1,9 @@
-package com.example.petshop.entities;
+package com.example.demo.entities;
+
 
 import jakarta.persistence.*;
 import java.util.List;
+import com.example.demo.enums.Especialidade;
 
 @Entity
 @Table(name = "veterinario")
