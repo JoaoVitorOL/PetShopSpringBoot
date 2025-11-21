@@ -1,6 +1,6 @@
-package com.petshop.demo.domain.enums;
+package com.example.demo.enums;
 
-public enum StatusConsulta {
+public enum Status {
 
     AGENDADA(0, "Agendada"),
     EM_ATENDIMENTO(2, "Em atendimento"),
@@ -8,13 +8,13 @@ public enum StatusConsulta {
     CANCELADA(4, "Cancelada"),
     NAO_COMPARECEU(5, "Não compareceu"),
     REMARCADA(6, "Remarcada"),
-    EM_ANALISE_EXAMES(7, "Em análise de exames"),
+    EM_ANALISE_EXAMES(7, "Em análise de exames");
 
 
     private final int codigo;
     private final String descricao;
 
-    StatusConsulta(int codigo, String descricao) {
+    Status(int codigo, String descricao) {
         this.codigo = codigo;
         this.descricao = descricao;
     }
@@ -27,12 +27,12 @@ public enum StatusConsulta {
         return descricao;
     }
 
-    public static StatusConsulta toEnum(Integer cod) {
+    public static Status toEnum(Integer cod) {
         if (cod == null) {
             return null;
         }
 
-        for (StatusConsulta x : StatusConsulta.values()) {
+        for (Status x : Status.values()) {
             if (cod.equals(x.getCodigo())) {
                 return x;
             }
@@ -40,5 +40,4 @@ public enum StatusConsulta {
 
         throw new IllegalArgumentException("Status inválido: " + cod);
     }
-}
-
+    }
