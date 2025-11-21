@@ -1,8 +1,11 @@
-package com.example.demo.domain.entities;
+package com.example.demo.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
+import com.example.demo.enums.Sexo;
+
+
 
 @Entity
 @Table(name = "animal")
@@ -29,7 +32,7 @@ public class Animal {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private SexoAnimal sexo;
+    private Sexo sexo;
 
     private Float peso;
 
@@ -55,8 +58,8 @@ public class Animal {
     public Dono getDono() { return dono; }
     public void setDono(Dono dono) { this.dono = dono; }
 
-    public SexoAnimal getSexo() { return sexo; }
-    public void setSexo(SexoAnimal sexo) { this.sexo = sexo; }
+    public Sexo getSexo() { return sexo; }
+    public void setSexo(Sexo sexo) { this.sexo = sexo; }
 
     public Float getPeso() { return peso; }
     public void setPeso(Float peso) { this.peso = peso; }
