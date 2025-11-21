@@ -36,7 +36,7 @@ Consultas
 * motivo
 * status
 
-  Vacinas
+Vacinas
 * id_vacina
 * nome
 * descricao
