@@ -19,19 +19,9 @@ public class Veterinario extends Pessoa {
         this.especialidade = especialidade;
     }
 
-    public Double getSalario() {
-        return salario;
-    }
+    public Double getSalario() { return salario; }
+    public void setSalario(Double salario) { this.salario = salario; }
 
-    public void setSalario(Double salario) {
-        this.salario = salario;
-    }
-
-    public Especialidade getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(Especialidade especialidade) {
-        this.especialidade = especialidade;
-    }
+    public Especialidade getEspecialidade() { return especialidade; }
+    public void setEspecialidade(Especialidade especialidade) { this.especialidade = especialidade; }
 }
