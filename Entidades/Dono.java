@@ -1,7 +1,8 @@
-package Nome_do_Package;
+package com.example.demo.entities;
 
 import jakarta.persistence.*;
 import java.util.List;
+import com.example.demo.enums.CidadeSC;
 
 @Entity
 @Table(name = "dono")
@@ -16,8 +17,8 @@ public class Dono extends Pessoa {
     @OneToMany(mappedBy = "dono")
     private List<Animal> animais;
 
-    public Cidade getCidade() { return cidade; }
-    public void setCidade(Cidade cidade) { this.cidade = cidade; }
+    public CidadeSC getCidade() { return cidade; }
+    public void setCidade(CidadeSC cidade) { this.cidade = cidade; }
 
     public String getEndereco() { return endereco; }
     public void setEndereco(String endereco) { this.endereco = endereco; }
