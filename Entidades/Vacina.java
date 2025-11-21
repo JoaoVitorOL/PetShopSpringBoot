@@ -1,9 +1,10 @@
 package com.example.petshop.entidades;
 
 import jakarta.persistence.*;
+import java.util.List;
 
-@Table(name = "Vacina")
 @Entity
+@Table(name = "vacina")
 public class Vacina {
 
     @Id
@@ -19,6 +20,9 @@ public class Vacina {
     @Column(nullable = false)
     private Integer duracao;
 
+    @ManyToMany(mappedBy = "vacinas")
+    private List<Consulta> consultas;
+
     // Getters e Setters
     public Integer getIdVacina() { return idVacina; }
     public void setIdVacina(Integer idVacina) { this.idVacina = idVacina; }
@@ -31,4 +35,7 @@ public class Vacina {
 
     public Integer getDuracao() { return duracao; }
     public void setDuracao(Integer duracao) { this.duracao = duracao; }
+
+    public List<Consulta> getConsultas() { return consultas; }
+    public void setConsultas(List<Consulta> consultas) { this.consultas = consultas; }
 }
