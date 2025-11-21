@@ -55,14 +55,13 @@ Animais
 * peso
 
 
-RELACIONAMENTOS:
+RELACIONAMENTOS:<br>
 
-1 dono pode ter N animais
-1 animal tem só 1 dono
-1 animal N consultas
-1 veterinario N consultas
-1 consulta 1 vatarinario
-1 consulta 1:N vacinas
-
+1 dono pode ter N animais <br>
+1 animal tem só 1 dono <br>
+1 animal N consultas  <br>
+1 veterinario N consultas  <br>
+1 consulta 1 vatarinario  <br>
+1 consulta 1:N vacinas  <br>
 
 
